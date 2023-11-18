@@ -31,7 +31,9 @@ enum ButtonStyle: String {
 
 class CustomButton: UIButton {
     var width = UIScreen.main.bounds.width * 0.2
-    let numberButtonElements = "0123456789,"
+    var buttonStyle = ButtonStyle.numberMode
+    
+    let numberButtonElements = "0123456789."
     let operationButtonElements = "/x-+="
     let displayButtonElements = "AC+/-%"
     
@@ -70,6 +72,7 @@ class CustomButton: UIButton {
     }
     
     func setupWithStyle(_ style: ButtonStyle){
+        buttonStyle = style.self
         setTitleColor(style.tintColor, for: .normal)
         backgroundColor = style.backgroundColor
     }
