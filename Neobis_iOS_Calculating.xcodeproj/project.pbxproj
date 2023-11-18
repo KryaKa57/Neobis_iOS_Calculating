@@ -14,6 +14,7 @@
 		649461562B06480400A6E3A1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 649461542B06480400A6E3A1 /* LaunchScreen.storyboard */; };
 		6494615E2B06543200A6E3A1 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6494615D2B06543200A6E3A1 /* Extensions.swift */; };
 		649461602B06640500A6E3A1 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6494615F2B06640500A6E3A1 /* CustomButton.swift */; };
+		649461622B08FC6400A6E3A1 /* VerticalAlignedLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649461612B08FC6400A6E3A1 /* VerticalAlignedLabel.swift */; };
 		BB294D42CF93E2558B4C2A3F /* Pods_Neobis_iOS_Calculating.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4841D77B1571C69EB0413596 /* Pods_Neobis_iOS_Calculating.framework */; };
 /* End PBXBuildFile section */
 
@@ -28,6 +29,7 @@
 		649461572B06480400A6E3A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6494615D2B06543200A6E3A1 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		6494615F2B06640500A6E3A1 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		649461612B08FC6400A6E3A1 /* VerticalAlignedLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalAlignedLabel.swift; sourceTree = "<group>"; };
 		A7BAC51A6A6E3D720C8B52C1 /* Pods-Neobis_iOS_Calculating.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Neobis_iOS_Calculating.release.xcconfig"; path = "Target Support Files/Pods-Neobis_iOS_Calculating/Pods-Neobis_iOS_Calculating.release.xcconfig"; sourceTree = "<group>"; };
 		D0F70E59EEC3B0DE5CB02C10 /* Pods-Neobis_iOS_Calculating.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Neobis_iOS_Calculating.debug.xcconfig"; path = "Target Support Files/Pods-Neobis_iOS_Calculating/Pods-Neobis_iOS_Calculating.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -68,6 +70,7 @@
 				649461492B06480300A6E3A1 /* AppDelegate.swift */,
 				6494614B2B06480300A6E3A1 /* SceneDelegate.swift */,
 				6494614D2B06480300A6E3A1 /* CalculatingViewController.swift */,
+				649461612B08FC6400A6E3A1 /* VerticalAlignedLabel.swift */,
 				6494615F2B06640500A6E3A1 /* CustomButton.swift */,
 				6494615D2B06543200A6E3A1 /* Extensions.swift */,
 				649461522B06480400A6E3A1 /* Assets.xcassets */,
@@ -211,6 +214,7 @@
 				6494614E2B06480300A6E3A1 /* CalculatingViewController.swift in Sources */,
 				6494614A2B06480300A6E3A1 /* AppDelegate.swift in Sources */,
 				6494614C2B06480300A6E3A1 /* SceneDelegate.swift in Sources */,
+				649461622B08FC6400A6E3A1 /* VerticalAlignedLabel.swift in Sources */,
 				6494615E2B06543200A6E3A1 /* Extensions.swift in Sources */,
 				649461602B06640500A6E3A1 /* CustomButton.swift in Sources */,
 			);

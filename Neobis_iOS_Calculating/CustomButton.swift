@@ -59,6 +59,17 @@ class CustomButton: UIButton {
         }
     }
     
+    @IBInspectable var isClicked: Bool = false {
+        didSet {
+            if isClicked {
+                self.backgroundColor = .white
+                self.setTitleColor(UIColor(rgb: 0xFF9500), for  : .normal)
+            } else {
+                setupWithStyle(.operationMode)
+            }
+        }
+    }
+    
     func setup() {
         self.layer.cornerRadius = UIScreen.main.bounds.width * 0.2 / 2
         self.translatesAutoresizingMaskIntoConstraints = false
@@ -73,7 +84,7 @@ class CustomButton: UIButton {
     
     func setupWithStyle(_ style: ButtonStyle){
         buttonStyle = style.self
-        setTitleColor(style.tintColor, for: .normal)
+        setTitleColor(style.tintColor, for  : .normal)
         backgroundColor = style.backgroundColor
     }
 }
