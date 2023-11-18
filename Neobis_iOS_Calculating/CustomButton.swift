@@ -30,37 +30,31 @@ enum ButtonStyle: String {
 }
 
 class CustomButton: UIButton {
-    
-    @IBInspectable var titleText: String? {
-        didSet {
-            let attributedTitle = NSAttributedString(string: titleText ?? "",
-                                                     attributes: [NSAttributedString.Key.font : UIFont.systemFont(ofSize: 24)])
-            self.setAttributedTitle(attributedTitle, for: .normal)
-        }
-    }
-    
-    @IBInspectable var style: String? {
-        set { setupWithStyleNamed(newValue) }
-        get { return nil }
-    }
-    
-    private func setupWithStyleNamed(_ named: String?){
-        if let styleName = named, let style = ButtonStyle(rawValue: styleName) {
-            setupWithStyle(style)
-        }
-    }
-    
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
+    var width = UIScreen.main.bounds.width * 0.2
+    let numberButtonElements = "0123456789,"
+    let operationButtonElements = "/x-+="
+    let displayButtonElements = "AC+/-%"
     
     override func layoutSubviews() {
         super.layoutSubviews()
         setup()
+    }
+    
+    @IBInspectable var titleText: String? {
+        didSet {
+            let titleTextUnwrapped = titleText ?? ""
+            let attributedTitle = NSAttributedString(string: titleTextUnwrapped,
+                                                     attributes: [NSAttributedString.Key.font : UIFont.systemFont(ofSize: 24)])
+            self.setAttributedTitle(attributedTitle, for: .normal)
+            
+            if numberButtonElements.contains(titleTextUnwrapped) {
+                setupWithStyle(.numberMode)
+            } else if operationButtonElements.contains(titleTextUnwrapped) {
+                setupWithStyle(.operationMode)
+            } else {
+                setupWithStyle(.displayMode)
+            }
+        }
     }
     
     func setup() {
@@ -68,9 +62,15 @@ class CustomButton: UIButton {
         self.translatesAutoresizingMaskIntoConstraints = false
     }
     
+    override var intrinsicContentSize: CGSize {
+        if self.titleText == "0" {
+            return CGSize(width: self.width * 2 + 16, height: 1)
+        }
+        return CGSize(width: self.width, height: 1)
+    }
+    
     func setupWithStyle(_ style: ButtonStyle){
         setTitleColor(style.tintColor, for: .normal)
         backgroundColor = style.backgroundColor
     }
-    
 }
