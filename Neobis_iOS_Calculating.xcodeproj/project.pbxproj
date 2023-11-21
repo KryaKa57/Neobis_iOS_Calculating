@@ -15,6 +15,8 @@
 		6494615E2B06543200A6E3A1 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6494615D2B06543200A6E3A1 /* Extensions.swift */; };
 		649461602B06640500A6E3A1 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6494615F2B06640500A6E3A1 /* CustomButton.swift */; };
 		649461622B08FC6400A6E3A1 /* VerticalAlignedLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649461612B08FC6400A6E3A1 /* VerticalAlignedLabel.swift */; };
+		649461642B0B90F900A6E3A1 /* CalculatingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649461632B0B90F900A6E3A1 /* CalculatingViewModel.swift */; };
+		6494616C2B0D186E00A6E3A1 /* ButtonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6494616B2B0D186E00A6E3A1 /* ButtonModel.swift */; };
 		BB294D42CF93E2558B4C2A3F /* Pods_Neobis_iOS_Calculating.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4841D77B1571C69EB0413596 /* Pods_Neobis_iOS_Calculating.framework */; };
 /* End PBXBuildFile section */
 
@@ -30,6 +32,8 @@
 		6494615D2B06543200A6E3A1 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		6494615F2B06640500A6E3A1 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		649461612B08FC6400A6E3A1 /* VerticalAlignedLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalAlignedLabel.swift; sourceTree = "<group>"; };
+		649461632B0B90F900A6E3A1 /* CalculatingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatingViewModel.swift; sourceTree = "<group>"; };
+		6494616B2B0D186E00A6E3A1 /* ButtonModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonModel.swift; sourceTree = "<group>"; };
 		A7BAC51A6A6E3D720C8B52C1 /* Pods-Neobis_iOS_Calculating.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Neobis_iOS_Calculating.release.xcconfig"; path = "Target Support Files/Pods-Neobis_iOS_Calculating/Pods-Neobis_iOS_Calculating.release.xcconfig"; sourceTree = "<group>"; };
 		D0F70E59EEC3B0DE5CB02C10 /* Pods-Neobis_iOS_Calculating.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Neobis_iOS_Calculating.debug.xcconfig"; path = "Target Support Files/Pods-Neobis_iOS_Calculating/Pods-Neobis_iOS_Calculating.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -67,17 +71,59 @@
 		649461482B06480300A6E3A1 /* Neobis_iOS_Calculating */ = {
 			isa = PBXGroup;
 			children = (
-				649461492B06480300A6E3A1 /* AppDelegate.swift */,
-				6494614B2B06480300A6E3A1 /* SceneDelegate.swift */,
-				6494614D2B06480300A6E3A1 /* CalculatingViewController.swift */,
-				649461612B08FC6400A6E3A1 /* VerticalAlignedLabel.swift */,
-				6494615F2B06640500A6E3A1 /* CustomButton.swift */,
+				649461692B0B948200A6E3A1 /* MainModule */,
+				6494616A2B0B972500A6E3A1 /* Supporting */,
 				6494615D2B06543200A6E3A1 /* Extensions.swift */,
-				649461522B06480400A6E3A1 /* Assets.xcassets */,
-				649461542B06480400A6E3A1 /* LaunchScreen.storyboard */,
 				649461572B06480400A6E3A1 /* Info.plist */,
 			);
 			path = Neobis_iOS_Calculating;
+			sourceTree = "<group>";
+		};
+		649461652B0B93C900A6E3A1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6494615F2B06640500A6E3A1 /* CustomButton.swift */,
+				649461612B08FC6400A6E3A1 /* VerticalAlignedLabel.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		649461672B0B93DF00A6E3A1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6494616B2B0D186E00A6E3A1 /* ButtonModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		649461682B0B93F100A6E3A1 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				649461632B0B90F900A6E3A1 /* CalculatingViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		649461692B0B948200A6E3A1 /* MainModule */ = {
+			isa = PBXGroup;
+			children = (
+				6494614D2B06480300A6E3A1 /* CalculatingViewController.swift */,
+				649461652B0B93C900A6E3A1 /* View */,
+				649461672B0B93DF00A6E3A1 /* Model */,
+				649461682B0B93F100A6E3A1 /* ViewModel */,
+			);
+			path = MainModule;
+			sourceTree = "<group>";
+		};
+		6494616A2B0B972500A6E3A1 /* Supporting */ = {
+			isa = PBXGroup;
+			children = (
+				649461492B06480300A6E3A1 /* AppDelegate.swift */,
+				6494614B2B06480300A6E3A1 /* SceneDelegate.swift */,
+				649461522B06480400A6E3A1 /* Assets.xcassets */,
+				649461542B06480400A6E3A1 /* LaunchScreen.storyboard */,
+			);
+			path = Supporting;
 			sourceTree = "<group>";
 		};
 		A9AFE011772056AE506B5E5D /* Pods */ = {
@@ -211,6 +257,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				649461642B0B90F900A6E3A1 /* CalculatingViewModel.swift in Sources */,
+				6494616C2B0D186E00A6E3A1 /* ButtonModel.swift in Sources */,
 				6494614E2B06480300A6E3A1 /* CalculatingViewController.swift in Sources */,
 				6494614A2B06480300A6E3A1 /* AppDelegate.swift in Sources */,
 				6494614C2B06480300A6E3A1 /* SceneDelegate.swift in Sources */,
